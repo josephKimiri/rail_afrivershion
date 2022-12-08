@@ -1,0 +1,1850 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load cart %}
+{% load custom_filter %}
+<!DOCTYPE html>
+<html lang="en-US" style=""
+    class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+
+<head>
+    <link rel="stylesheet" href="./styles/jquery-ripples.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Afrivershion</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+    <script type="text/javascript" src="./js/wp-emoji-settings.js"> </script>
+    <script src="./js/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css" href="./styles/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="classic-theme-styles-css" href="./styles/classic-themes.min.css" type="text/css"
+        media="all">
+    <link rel="stylesheet" href="./styles/global-styles-inline.css">
+    <link rel="stylesheet" id="contact-form-7-css" href="./styles/styles.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal_fn_googlefonts-css"
+        href="https://fonts.googleapis.com/css?family=Lora%3A400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CHeebo%3A400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CHeebo%3A400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CNunito%3A400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic&amp;subset=latin%2Ccyrillic%2Cgreek%2Cvietnamese&amp;ver=6.1.1"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="./styles/elementor-icons.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="./styles/custom-frontend-lite.min.css" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-post-7-css" href="./styles/post-7.css" type="text/css" media="all">
+    <link rel="stylesheet" id="frel_fontello-css" href="./styles/fontello.css" type="text/css" media="all">
+    <link rel="stylesheet" id="magnific.popup-css" href="./styles/magnific.popup.css" type="text/css" media="all">
+    <link rel="stylesheet" id="swiper-css" href="./styles/swiper.css" type="text/css" media="all">
+    <link rel="stylesheet" id="justified-css" href="./styles/justified.css" type="text/css" media="all">
+    <link rel="stylesheet" id="frel_style-css" href="./styles/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-global-css" href="./styles/global.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-89-css" href="./styles/post-89.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-font-url-css"
+        href="https://fonts.googleapis.com/css?family=Heebo%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C800%2C800i%7CNunito%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C800%2C800i%7COpen+Sans%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C800%2C800i%7CLora%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C800%2C800i%7CMontserrat%3A200%2C200%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C700%2C700i%2C800%2C800i&amp;subset=latin%2Clatin-ext"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="fontello-css" href="./styles/fontello2.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-base-css" href="./styles/base.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-skeleton-css" href="./styles/skeleton.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-wp-core-css" href="./styles/wp-core.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-theme-base-css" href="./styles/theme-base.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-widgets-css" href="./styles/widgets.css" type="text/css" media="all">
+    <link rel="stylesheet" id="metaportal-fn-stylesheet-css" href="./styles/style2.css" type="text/css" media="all">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css?family=Nunito:400%7CHeebo:400%7CLora:400&amp;display=swap&amp;ver=1663742158">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:400%7CHeebo:400%7CLora:400&amp;display=swap&amp;ver=1663742158"
+        media="all" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Nunito:400%7CHeebo:400%7CLora:400&#038;display=swap&#038;ver=1663742158" />
+    </noscript>
+    <link rel="stylesheet" id="metaportal_fn_inline-css" href="./styles/inline.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./styles/metaportal_fn_inline-inline.css">
+    <link rel="stylesheet" id="google-fonts-1-css"
+        href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CNunito%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CHeebo%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.1.1"
+        type="text/css" media="all">
+    <script type="text/javascript" src="./js/jquery.min.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="./js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script type="text/javascript" src="./js/modernizr.custom.js" id="modernizr-custom-js"></script>
+
+    <link rel="stylesheet" href="./styles/metaportal_fn_option-dynamic.css">
+
+
+</head>
+
+<body
+    class="home page-template-default page page-id-89 sticky-enabled elementor-default elementor-kit-7 elementor-page elementor-page-89 e--ua-blink e--ua-chrome e--ua-webkit totop-active"
+    data-elementor-device-mode="tablet">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.49803921568627"></feFuncG>
+                    <feFuncB type="table" tableValues="0 0.49803921568627"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 1"></feFuncG>
+                    <feFuncB type="table" tableValues="0 1"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765"></feFuncR>
+                    <feFuncG type="table" tableValues="0 1"></feFuncG>
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.27843137254902"></feFuncG>
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.64705882352941"></feFuncG>
+                    <feFuncB type="table" tableValues="0 1"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.94901960784314"></feFuncG>
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745"></feFuncR>
+                    <feFuncG type="table" tableValues="0 1"></feFuncG>
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 ">
+                </feColorMatrix>
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1"></feFuncR>
+                    <feFuncG type="table" tableValues="0 0.66274509803922"></feFuncG>
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725"></feFuncB>
+                    <feFuncA type="table" tableValues="1 1"></feFuncA>
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <!-- Preloader -->
+    <div class="metaportal_fn_preloader ready">
+        <div class="loading-container">
+            <div class="loading">
+                <div class="l1">
+                    <div></div>
+                </div>
+                <div class="l2">
+                    <div></div>
+                </div>
+                <div class="l3">
+                    <div></div>
+                </div>
+                <div class="l4">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !Preloader -->
+
+
+    <!-- HTML starts here -->
+    <div class="metaportal-fn-wrapper core_ready" data-footer-sticky="disabled" data-nav-speed="medium">
+
+
+        <!-- Left bar starts here -->
+
+        <!-- Left Navigation -->
+        <div class="metaportal_fn_leftnav_closer"></div>
+        <div class="metaportal_fn_leftnav">
+            <a href="#" class="fn__closer"><span></span></a>
+            <div class="navbox" style="min-height: 500px;">
+                <div class="list_holder">
+                    <ul class="metaportal_fn_items">
+                        <li>
+                            <div class="item"><a href="https://opensea.io/" class="" target="_blank"></a><span
+                                    class="icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.0"
+                                        width="223.000000pt" height="200.000000pt" viewBox="0 0 223.000000 200.000000"
+                                        preserveAspectRatio="xMidYMid meet" class="fn__svg replaced-svg">
+
+                                        <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
+                                            stroke="none">
+                                            <path
+                                                d="M1058 1985 c-40 -22 -48 -45 -48 -129 0 -42 -3 -76 -8 -76 -4 0 -65 16 -136 35 -71 20 -131 34 -133 31 -2 -2 14 -40 36 -85 142 -282 206 -551 170 -723 -13 -65 -90 -228 -153 -327 -26 -40 -45 -79 -42 -87 4 -11 34 -14 136 -14 l130 0 0 -100 0 -100 -152 0 c-134 0 -157 2 -196 21 -56 27 -93 84 -100 149 l-5 50 -275 0 -275 0 6 -78 c7 -85 37 -181 82 -258 44 -75 150 -174 231 -217 140 -73 135 -72 739 -72 534 0 541 0 587 22 69 31 141 104 212 213 35 52 84 127 110 167 37 56 62 82 116 118 37 25 82 50 99 56 31 11 31 11 31 86 0 66 -2 74 -17 69 -10 -3 -137 -39 -283 -81 l-265 -77 -70 -68 c-92 -91 -116 -100 -260 -100 l-115 0 0 100 0 100 74 0 c85 0 102 10 200 120 75 84 110 135 149 218 28 58 32 77 31 147 -1 97 -23 160 -96 272 -52 81 -266 303 -326 338 l-32 19 0 88 c0 90 -13 142 -43 166 -24 20 -79 24 -109 7z">
+                                            </path>
+                                            <path
+                                                d="M586 1558 c-18 -29 -126 -198 -240 -376 -113 -178 -206 -328 -206 -333 0 -5 103 -9 254 -9 l254 0 52 105 c61 121 72 195 50 319 -21 118 -101 346 -121 346 -5 0 -24 -24 -43 -52z">
+                                            </path>
+                                        </g>
+                                    </svg></span><span class="text">OpenSea</span></div>
+                        </li>
+                        <li>
+                            <div class="item"><a href="https://discord.com/" class="" target="_blank"></a><span
+                                    class="icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.0"
+                                        width="512.000000pt" height="392.000000pt" viewBox="0 0 512.000000 392.000000"
+                                        preserveAspectRatio="xMidYMid meet" class="fn__svg replaced-svg">
+
+                                        <g transform="translate(0.000000,392.000000) scale(0.100000,-0.100000)"
+                                            stroke="none">
+                                            <path
+                                                d="M1690 3885 c-317 -70 -559 -148 -858 -275 -49 -21 -57 -30 -126 -139 -330 -522 -544 -1059 -641 -1610 -50 -287 -59 -412 -58 -766 1 -181 5 -355 10 -385 l8 -54 130 -89 c325 -221 663 -391 1017 -512 73 -25 138 -43 144 -41 25 10 274 407 274 437 0 4 -26 17 -57 29 -79 31 -335 158 -352 175 -17 17 -13 23 41 62 l43 31 100 -43 c528 -225 1131 -298 1690 -204 257 43 491 114 766 232 35 15 36 15 80 -20 24 -19 44 -40 44 -46 0 -14 -209 -124 -320 -168 -44 -18 -84 -36 -89 -40 -20 -18 239 -448 270 -449 7 0 65 18 130 41 369 127 702 294 1029 516 l130 89 7 54 c3 30 9 159 13 285 28 882 -200 1686 -702 2477 l-74 116 -137 57 c-253 105 -583 205 -826 250 l-90 17 -17 -24 c-10 -12 -42 -74 -71 -137 l-53 -113 -50 6 c-27 3 -93 11 -145 18 -124 16 -645 16 -775 0 -55 -6 -122 -14 -150 -18 l-50 -5 -65 133 c-76 155 -63 148 -220 113z m204 -1649 c131 -64 226 -189 262 -343 20 -84 14 -223 -14 -304 -115 -344 -492 -448 -737 -204 -160 160 -199 419 -95 632 57 115 150 199 269 240 55 20 80 23 154 20 76 -4 98 -9 161 -41z m1702 -1 c171 -84 274 -259 274 -465 0 -150 -47 -274 -142 -375 -260 -279 -680 -133 -764 265 -44 209 47 442 216 550 82 53 151 71 253 66 77 -3 98 -8 163 -41z">
+                                            </path>
+                                        </g>
+                                    </svg></span><span class="text">Discord</span></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav_holder">
+
+                    <!-- For JS -->
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Capa_1" x="0px" y="0px" width="284.929px" height="284.929px"
+                            viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
+                            xml:space="preserve" class="fn__svg  replaced-svg">
+                            <g>
+                                <path
+                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                </path>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg> </span>
+                    <!-- For JS -->
+
+                    <div class="menu-left-menu-container">
+                        <ul id="menu-left-menu" class="left_nav">
+                            <li id="menu-item-21"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-21">
+                                <a href="#"><span class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                                            style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                                            class="fn__svg  replaced-svg">
+                                            <g>
+                                                <path
+                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </svg>Home</span></a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-270"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-89 current_page_item menu-item-270">
+                                        <a href="https://frenify.net/envato/frenify/wp/metaportal/1/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>#1 3D Carousel</span></a>
+                                    </li>
+                                    <li id="menu-item-400"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400">
+                                        <a href="https://frenify.net/envato/frenify/wp/metaportal/1/home-2/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>#2 Bended Carousel</span></a>
+                                    </li>
+                                    <li id="menu-item-404"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404">
+                                        <a href="https://frenify.net/envato/frenify/wp/metaportal/1/home-3/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>#3 Video Background</span></a>
+                                    </li>
+                                    <li id="menu-item-403"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403">
+                                        <a href="https://frenify.net/envato/frenify/wp/metaportal/1/home-4/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>#4 Water Effect</span></a>
+                                    </li>
+                                    <li id="menu-item-402"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-402">
+                                        <a href="https://frenify.net/envato/frenify/wp/metaportal/1/home-5/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>#5 Simple Carousel</span></a>
+                                    </li>
+                                    <li id="menu-item-401"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401">
+                                        <a href="https://frenify.net/envato/frenify/wp/metaportal/1/home-6/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>#6 FullScreen Slider</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-88"
+                                class="menu-item menu-item-type-post_type menu-item-object-frenify-nft menu-item-88"><a
+                                    href="https://frenify.net/envato/frenify/wp/metaportal/1/nft/meta-legends-4579/"><span
+                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                                            style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                                            class="fn__svg  replaced-svg">
+                                            <g>
+                                                <path
+                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </svg>NFT Single</span></a></li>
+                            <li id="menu-item-87"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a
+                                    href="https://frenify.net/envato/frenify/wp/metaportal/1/collection/"><span
+                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                                            style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                                            class="fn__svg  replaced-svg">
+                                            <g>
+                                                <path
+                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </svg>Collection</span></a></li>
+                            <li id="menu-item-24"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-24">
+                                <a href="#"><span class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                                            style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                                            class="fn__svg  replaced-svg">
+                                            <g>
+                                                <path
+                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </svg>Pages</span></a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-43"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a
+                                            href="https://frenify.net/envato/frenify/wp/metaportal/1/coming-soon/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>Coming Soon</span></a></li>
+                                    <li id="menu-item-28"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a
+                                            href="https://frenify.net/envato/frenify/wp/metaportal/1/404"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>404 Page</span></a></li>
+                                    <li id="menu-item-39"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a
+                                            href="https://frenify.net/envato/frenify/wp/metaportal/1/sample-page/"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>Protected Page</span></a></li>
+                                    <li id="menu-item-30"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a
+                                            href="https://frenify.net/envato/frenify/wp/metaportal/1/?s=asd"><span
+                                                class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>Search no Results</span></a></li>
+                                    <li id="menu-item-34"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-34">
+                                        <a href="#"><span class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" width="284.929px" height="284.929px"
+                                                    viewBox="0 0 284.929 284.929"
+                                                    style="enable-background:new 0 0 284.929 284.929;"
+                                                    xml:space="preserve" class="fn__svg  replaced-svg">
+                                                    <g>
+                                                        <path
+                                                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                        </path>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                    <g>
+                                                    </g>
+                                                </svg>More</span></a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-272"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272">
+                                                <a href="https://frenify.net/envato/frenify/wp/metaportal/1/cookies/"><span
+                                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                            id="Capa_1" x="0px" y="0px" width="284.929px"
+                                                            height="284.929px" viewBox="0 0 284.929 284.929"
+                                                            style="enable-background:new 0 0 284.929 284.929;"
+                                                            xml:space="preserve" class="fn__svg  replaced-svg">
+                                                            <g>
+                                                                <path
+                                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                                </path>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                        </svg>Cookies</span></a>
+                                            </li>
+                                            <li id="menu-item-271"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-271">
+                                                <a
+                                                    href="https://frenify.net/envato/frenify/wp/metaportal/1/privacy-policy/"><span
+                                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                            id="Capa_1" x="0px" y="0px" width="284.929px"
+                                                            height="284.929px" viewBox="0 0 284.929 284.929"
+                                                            style="enable-background:new 0 0 284.929 284.929;"
+                                                            xml:space="preserve" class="fn__svg  replaced-svg">
+                                                            <g>
+                                                                <path
+                                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                                </path>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                        </svg>Privacy Policy</span></a>
+                                            </li>
+                                            <li id="menu-item-273"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273">
+                                                <a
+                                                    href="https://frenify.net/envato/frenify/wp/metaportal/1/terms-conditions/"><span
+                                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                                            id="Capa_1" x="0px" y="0px" width="284.929px"
+                                                            height="284.929px" viewBox="0 0 284.929 284.929"
+                                                            style="enable-background:new 0 0 284.929 284.929;"
+                                                            xml:space="preserve" class="fn__svg  replaced-svg">
+                                                            <g>
+                                                                <path
+                                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                                </path>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                        </svg>Terms &amp; Conditions</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-37"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a
+                                    href="https://frenify.net/envato/frenify/wp/metaportal/1/blog/"><span
+                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                                            style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                                            class="fn__svg  replaced-svg">
+                                            <g>
+                                                <path
+                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </svg>Blog</span></a></li>
+                            <li id="menu-item-40"
+                                class="menu-item menu-item-type-post_type menu-item-object-post menu-item-40"><a
+                                    href="https://frenify.net/envato/frenify/wp/metaportal/1/metaportals-nft-goes-public-in-nod-to-crypto-adoption/"><span
+                                        class="creative_link"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                                            style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                                            class="fn__svg  replaced-svg">
+                                            <g>
+                                                <path
+                                                    d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                                                </path>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                        </svg>Blog Single</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info_holder">
+                    <div class="copyright">
+                        <p>
+                            Copyright 2022 - Designed &amp; Developed by <a
+                                href="https://themeforest.net/user/frenify/portfolio" target="_blank">Frenify</a> </p>
+                    </div>
+                    <div class="metaportal_fn_social_list">
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="fn-icon-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fn-icon-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fn-icon-pinterest"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fn-icon-linkedin"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fn-icon-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- !Left Navigation -->
+        <!-- Left bar ends here -->
+
+        <!-- Right bar starts here -->
+        <!-- Right bar ends here -->
+
+        <!-- Header starts here -->
+
+        <!-- Header -->
+
+        <!-- !Header -->
+
+
+        <!-- More Categories -->
+        <div class="metaportal_fn_hidden more_cats">
+            <div class="metaportal_fn_more_categories">
+                <a href="#" data-more="Show More" data-less="Show Less">
+                    <span class="text">Show More</span>
+                    <span class="fn_count"></span>
+                </a>
+            </div>
+        </div>
+        <!-- !More Categories -->
+
+
+        <div class="metaportal_fn_product_preloader">
+            <div class="spinner"></div>
+        </div> <!-- Header ends here -->
+
+        <!-- Header starts here -->
+
+        <!-- Mobile Navigation -->
+
+        <!-- !Mobile Navigation -->
+        <!-- Header ends here -->
+
+        <div class="metaportal_fn_content">
+            <div class="metaportal_fn_pages">
+                <div class="metaportal_fn_page_ajax" style="min-height: 538px;">
+
+
+
+                    <div class="metaportal_fn_full_page_template">
+
+
+                        <!-- ALL PAGES -->
+                        <div class="metaportal_fn_full_page_in">
+
+                            <!-- PAGE -->
+                            <div class="full_content">
+
+                                <div data-elementor-type="wp-page" data-elementor-id="89"
+                                    class="elementor elementor-89">
+
+
+                                    <section
+                                        class="elementor-section elementor-top-section elementor-element elementor-element-b0c1f3a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                                        data-id="b0c1f3a" data-element_type="section">
+                                        <div class="elementor-container elementor-column-gap-default">
+                                            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-259c97f"
+                                                data-id="259c97f" data-element_type="column"
+                                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                    <div class="elementor-background-overlay"></div>
+                                                    <div class="elementor-element elementor-element-a5065da elementor-widget__width-initial e-transform elementor-widget elementor-widget-frel-image"
+                                                        data-id="a5065da" data-element_type="widget"
+                                                        data-settings="{&quot;_transform_translateX_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:130,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+                                                        data-widget_type="frel-image.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <div class="fn_cs_image"><img decoding="async"
+                                                                        src="https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1.jpg"
+                                                                        alt=""></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d5e07c5"
+                                                data-id="d5e07c5" data-element_type="column">
+                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                    <div class="elementor-element elementor-element-4e80910 elementor-widget elementor-widget-frel-title"
+                                                        data-id="4e80910" data-element_type="widget"
+                                                        data-widget_type="frel-title.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <h3 class="fn__maintitle " data-text="Afrivershion"
+                                                                    data-align="left">
+                                                                    Afrivershion</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-538adfb elementor-widget elementor-widget-frel-divider"
+                                                        data-id="538adfb" data-element_type="widget"
+                                                        data-widget_type="frel-divider.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <div class="fn_cs_divider" data-align="left">
+                                                                    <div class="divider"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-a1c200f elementor-widget elementor-widget-text-editor"
+                                                        data-id="a1c200f" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <p>As the first hero of the Meta Legends, collection has
+                                                                over 9,999 unique skins drawn from the different
+                                                                missions and challenges he faced throughout his life.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-a6aa44d elementor-widget elementor-widget-text-editor"
+                                                        data-id="a6aa44d" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <p>The artwork has been hand-drawned by Robert Green in the
+                                                                traditional anime style and composited by Layla Efiyo.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-cb4bf27 elementor-widget elementor-widget-text-editor"
+                                                        data-id="cb4bf27" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <p>Curabitur pharetra velit eget dignissim varius. In
+                                                                vulputate elit at tortor pellentesque, non pulvinar
+                                                                neque consequat. Aenean tristique odio in libero
+                                                                tincidunt maximus. Nulla pharetra viverra dolor ut
+                                                                blandit. Cras finibus vel tortor eget lacinia.
+                                                                Pellentesque interdum elit non lacinia faucibus. Morbi
+                                                                nec felis auctor, tincidunt lacus sit amet, iaculis
+                                                                ipsum. Phasellus tempus sit amet justo et feugiat. Duis
+                                                                blandit semper lorem, egestas euismod ligula pharetra
+                                                                ac. Sed porta lorem eget neque bibendum, eget euismod
+                                                                justo mollis.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-69a59e6 elementor-widget elementor-widget-text-editor"
+                                                        data-id="69a59e6" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            Donec tristique porttitor sem, eget fermentum elit varius
+                                                            nec. Donec ut orci ipsum. Morbi efficitur felis eget dapibus
+                                                            fermentum. Phasellus sed tellus volutpat, hendrerit leo non,
+                                                            sollicitudin neque. Etiam ac lacus quam. Vivamus suscipit
+                                                            nisl tellus, at congue odio commodo at. Cras ante enim,
+                                                            sodales at pretium et, tempus at libero. </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-0b6a8e1 elementor-widget elementor-widget-frel-buttons"
+                                                        data-id="0b6a8e1" data-element_type="widget"
+                                                        data-widget_type="frel-buttons.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <div class="fn_cs_buttons" data-align="left"><a
+                                                                        class="metaportal_fn_button"
+                                                                        href="https://instagram.com/" target="_blank"
+                                                                        rel="nofollow"><span>Find us On
+                                                                            Instagram</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" frenify-shape-divider frenify-shape-undefined frenify-shape-divider-top"
+                                            data-pos=""></div>
+                                        <div class="frenify-shape-divider frenify-shape-undefined frenify-shape-divider-bottom"
+                                            data-pos=""></div>
+                                    </section>
+                                    <section
+                                        class="elementor-section elementor-top-section elementor-element elementor-element-a29e632 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                        data-id="a29e632" data-element_type="section">
+                                        <div class="elementor-container elementor-column-gap-default">
+                                            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cfbc86c"
+                                                data-id="cfbc86c" data-element_type="column">
+                                                <div class="elementor-widget-wrap elementor-element-populated">
+                                                    <div class="elementor-element elementor-element-f1ab0de elementor-widget elementor-widget-frel-title"
+                                                        data-id="f1ab0de" data-element_type="widget"
+                                                        data-widget_type="frel-title.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <h3 class="fn__maintitle "
+                                                                    data-text="Afrivershion Guide" data-align="left">
+                                                                    Afrivershion Guide</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-8f0d1b1 elementor-widget elementor-widget-frel-divider"
+                                                        data-id="8f0d1b1" data-element_type="widget"
+                                                        data-widget_type="frel-divider.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <div class="fn_cs_divider" data-align="left">
+                                                                    <div class="divider"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-1df2955 elementor-widget elementor-widget-text-editor"
+                                                        data-id="1df2955" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                            do eiusmod tempor incididunt ut labore et dolore magna
+                                                            aliqua. Commodo viverra maecenas accumsan lacus vel
+                                                            facilisis volutpat est velit. Netus et malesuada fames ac
+                                                            turpis egestas. Lobortis scelerisque fermentum dui faucibus
+                                                            in ornare quam viverra. Feugiat in fermentum posuere urna
+                                                            nec tincidunt praesent semper feugiat. Dolor sit amet
+                                                            consectetur adipiscing elit ut aliquam.
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-bacfbac elementor-widget elementor-widget-text-editor"
+                                                        data-id="bacfbac" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            The artwork has been hand-drawned by Robert Green in the
+                                                            traditional anime style and composited by Layla Efiyo.
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-9ebdd4b elementor-widget elementor-widget-text-editor"
+                                                        data-id="9ebdd4b" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            Curabitur pharetra velit eget dignissim varius. In vulputate
+                                                            elit at tortor pellentesque, non pulvinar neque consequat.
+                                                            Aenean tristique odio in libero tincidunt maximus. Nulla
+                                                            pharetra viverra dolor ut blandit. Cras finibus vel tortor
+                                                            eget lacinia. Pellentesque interdum elit non lacinia
+                                                            faucibus. Morbi nec felis auctor, tincidunt lacus sit amet,
+                                                            iaculis ipsum. Phasellus tempus sit amet justo et feugiat.
+                                                            Duis blandit semper lorem, egestas euismod ligula pharetra
+                                                            ac. Sed porta lorem eget neque bibendum, eget euismod justo
+                                                            mollis.
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-ef32f23 elementor-widget elementor-widget-text-editor"
+                                                        data-id="ef32f23" data-element_type="widget"
+                                                        data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            Donec tristique porttitor sem, eget fermentum elit varius
+                                                            nec. Donec ut orci ipsum. Morbi efficitur felis eget dapibus
+                                                            fermentum. Phasellus sed tellus volutpat, hendrerit leo non,
+                                                            sollicitudin neque. Etiam ac lacus quam. Vivamus suscipit
+                                                            nisl tellus, at congue odio commodo at. Cras ante enim,
+                                                            sodales at pretium et, tempus at libero.
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-075691c elementor-widget elementor-widget-frel-buttons"
+                                                        data-id="075691c" data-element_type="widget"
+                                                        data-widget_type="frel-buttons.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="cons_w_wrapper">
+                                                                <div class="fn_cs_buttons" data-align="left"><a
+                                                                        class="metaportal_fn_button"
+                                                                        href="https://frenify.net/envato/frenify/wp/metaportal/1/meta-legends-4579/"
+                                                                        rel="nofollow" "=""><span>Afrivershion Guide</span></a></div></div>		</div>
+                    </div>
+                        </div>
+            </div>
+                    <div class=" elementor-column elementor-col-50 elementor-top-column elementor-element
+                                                                        elementor-element-d9bea8f" data-id="d9bea8f"
+                                                                        data-element_type="column">
+                                                                        <div
+                                                                            class="elementor-widget-wrap elementor-element-populated">
+                                                                            <div class="elementor-element elementor-element-aa49618 elementor-widget elementor-widget-frel-steps"
+                                                                                data-id="aa49618"
+                                                                                data-element_type="widget"
+                                                                                data-widget_type="frel-steps.default">
+                                                                                <div class="elementor-widget-container">
+                                                                                    <div class="cons_w_wrapper">
+                                                                                        <div class="fn_cs_steps">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <div class="item">
+                                                                                                        <div
+                                                                                                            class="item_in">
+                                                                                                            <h3
+                                                                                                                class="fn__gradient_title">
+                                                                                                                01</h3>
+                                                                                                            <p>
+                                                                                                                Fashion
+                                                                                                                Runway
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <div class="item">
+                                                                                                        <div
+                                                                                                            class="item_in">
+                                                                                                            <h3
+                                                                                                                class="fn__gradient_title">
+                                                                                                                02</h3>
+                                                                                                            <p>
+                                                                                                                Clothing
+                                                                                                                line
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <div class="item">
+                                                                                                        <div
+                                                                                                            class="item_in">
+                                                                                                            <h3
+                                                                                                                class="fn__gradient_title">
+                                                                                                                03</h3>
+                                                                                                            <p>
+                                                                                                                Shopping
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </li>
+
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <section
+                                                                                class="elementor-section elementor-inner-section elementor-element elementor-element-0d33a09 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                                                data-id="0d33a09"
+                                                                                data-element_type="section">
+                                                                                <div
+                                                                                    class="elementor-container elementor-column-gap-default">
+                                                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3806074"
+                                                                                        data-id="3806074"
+                                                                                        data-element_type="column">
+                                                                                        <div
+                                                                                            class="elementor-widget-wrap elementor-element-populated">
+                                                                                            <div class="elementor-element elementor-element-5047437 elementor-absolute elementor-widget elementor-widget-frel-video"
+                                                                                                data-id="5047437"
+                                                                                                data-element_type="widget"
+                                                                                                data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                                                                                data-widget_type="frel-video.default">
+                                                                                                <div
+                                                                                                    class="elementor-widget-container">
+                                                                                                    <div
+                                                                                                        class="cons_w_wrapper">
+                                                                                                        <div class="fn_cs_video"
+                                                                                                            data-align="center">
+                                                                                                            <a class="popup-youtube"
+                                                                                                                href="https://www.youtube.com/watch?v=7e90gBu4pas"><svg
+                                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                                                    version="1.1"
+                                                                                                                    id="play"
+                                                                                                                    x="0px"
+                                                                                                                    y="0px"
+                                                                                                                    height="100px"
+                                                                                                                    width="100px"
+                                                                                                                    viewBox="0 0 100 100"
+                                                                                                                    enable-background="new 0 0 100 100"
+                                                                                                                    xml:space="preserve"
+                                                                                                                    class="fn__svg  replaced-svg">
+                                                                                                                    <path
+                                                                                                                        class="stroke-solid"
+                                                                                                                        fill="none"
+                                                                                                                        d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7     C97.3,23.7,75.7,2.3,49.9,2.5">
+                                                                                                                    </path>
+                                                                                                                    <path
+                                                                                                                        class="icon"
+                                                                                                                        d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z">
+                                                                                                                    </path>
+                                                                                                                </svg></a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="elementor-element elementor-element-6a77cf6 elementor-widget elementor-widget-image"
+                                                                                                data-id="6a77cf6"
+                                                                                                data-element_type="widget"
+                                                                                                data-widget_type="image.default">
+                                                                                                <div
+                                                                                                    class="elementor-widget-container">
+                                                                                                    <style>
+                                                                                                        /*! elementor - v3.7.7 - 20-09-2022 */
+                                                                                                        .elementor-widget-image {
+                                                                                                            text-align: center
+                                                                                                        }
+
+                                                                                                        .elementor-widget-image a {
+                                                                                                            display: inline-block
+                                                                                                        }
+
+                                                                                                        .elementor-widget-image a img[src$=".svg"] {
+                                                                                                            width: 48px
+                                                                                                        }
+
+                                                                                                        .elementor-widget-image img {
+                                                                                                            vertical-align: middle;
+                                                                                                            display: inline-block
+                                                                                                        }
+                                                                                                    </style> <img
+                                                                                                        decoding="async"
+                                                                                                        width="1200"
+                                                                                                        height="632"
+                                                                                                        src="https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1-1.jpg"
+                                                                                                        class="attachment-full size-full"
+                                                                                                        alt=""
+                                                                                                        loading="lazy"
+                                                                                                        srcset="https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1-1.jpg 1200w, https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1-1-300x158.jpg 300w, https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1-1-1024x539.jpg 1024w, https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1-1-768x404.jpg 768w, https://frenify.net/envato/frenify/wp/metaportal/1/wp-content/uploads/2022/09/1-1-720x379.jpg 720w"
+                                                                                                        sizes="(max-width: 1200px) 100vw, 1200px">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="frenify-shape-divider frenify-shape-undefined frenify-shape-divider-top"
+                                                                                    data-pos=""></div>
+                                                                                <div class="frenify-shape-divider frenify-shape-undefined frenify-shape-divider-bottom"
+                                                                                    data-pos=""></div>
+                                                                            </section>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="frenify-shape-divider frenify-shape-undefined frenify-shape-divider-top"
+                                                                data-pos=""></div>
+                                                            <div class="frenify-shape-divider frenify-shape-undefined frenify-shape-divider-bottom"
+                                                                data-pos=""></div>
+                                    </section>
+
+
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                            <!-- /PAGE -->
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <!-- Footer -->
+
+                <!-- !Footer -->
+
+            </div>
+
+        </div>
+        <!-- All website content ends here -->
+
+
+        <div class="frenify-cursor cursor-outer" data-default="yes" data-link="yes" data-slider="yes"
+            style="visibility: visible; transform: translate(803px, 225px);"><span class="fn-cursor"></span></div>
+        <div class="frenify-cursor cursor-inner" data-default="yes" data-link="yes" data-slider="yes"
+            style="visibility: visible; transform: translate(803px, 225px);"><span class="fn-cursor"><span
+                    class="fn-left"></span><span class="fn-right"></span></span></div>
+
+    </div>
+    <!-- HTML ends here -->
+
+
+    <!-- Totop -->
+    <a href="#" class="metaportal_fn_totop" style="height: 50px;">
+        <span class="totop_inner">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Capa_1" x="0px" y="0px" width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"
+                    style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"
+                    class="fn__svg  replaced-svg">
+                    <g>
+                        <path
+                            d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441   L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082   c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647   c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z">
+                        </path>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg> </span>
+            <span class="text">Scroll To Top</span>
+        </span>
+    </a>
+    <!-- /Totop -->
+
+
+    <!-- Searchbox Popup -->
+    <div class="metaportal_fn_search_closer"></div>
+    <div class="metaportal_fn_searchbox">
+        <div class="container small">
+            <div class="searchbox">
+                <form action="https://frenify.net/envato/frenify/wp/metaportal/1/" method="get">
+                    <input type="text" placeholder="Search here..." name="s" autocomplete="off">
+                    <input type="submit" class="pe-7s-search" value="">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt"
+                            height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                            preserveAspectRatio="xMidYMid meet" class="fn__svg  replaced-svg">
+
+                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+                                <path
+                                    d="M2075 5113 c-437 -38 -840 -195 -1200 -466 -103 -78 -324 -299 -402 -402 -406 -538 -555 -1178 -427 -1825 128 -644 551 -1218 1131 -1532 783 -426 1728 -355 2438 181 l80 61 545 -543 c300 -299 558 -551 573 -561 43 -26 119 -32 171 -12 53 20 109 78 126 131 15 46 7 124 -16 162 -10 15 -262 273 -561 573 l-543 545 61 80 c852 1129 472 2742 -796 3378 -352 177 -798 264 -1180 230z m432 -429 c913 -133 1583 -903 1583 -1819 0 -1014 -821 -1835 -1835 -1835 -695 0 -1322 386 -1639 1010 -227 446 -260 972 -89 1445 138 384 411 723 751 934 159 99 356 184 522 227 207 53 499 69 707 38z">
+                                </path>
+                            </g>
+                        </svg></a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- !Searchbox Popup -->
+
+    <!-- Search Button -->
+
+    <!-- !Search Button -->
+
+    <script type="text/javascript" src="./js/swv.js" id="swv-js"></script>
+
+    <script type="text/javascript" src="./js/isotope.js" id="isotope-js"></script>
+    <script type="text/javascript" src="./js/waypoints.js" id="waypoints-js"></script>
+    <script type="text/javascript" src="./js/ripple.js" id="ripple-js"></script>
+    <script type="text/javascript" src="./js/particle.js" id="particle-js"></script>
+    <script type="text/javascript" id="metaportal-fn-init-js-extra" src="./js/metaportal-fn-init-js-extra.js">
+
+    </script>
+    <script type="text/javascript" src="./js/metaportal-fn-init.js" id="metaportal-fn-init-js"></script>
+    <script type="text/javascript" src="./js/comment-reply.min.js" id="comment-reply-js"></script>
+    <script type="text/javascript" src="./js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+    <script type="text/javascript" src="./js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+    <script type="text/javascript" src="./js/waypoints.min.js" id="elementor-waypoints-js"></script>
+    <script type="text/javascript" src="./js/jquery-ui-core.js" id="jquery-ui-core-js"></script>
+    <script type="text/javascript" id="elementor-frontend-js-before">
+        var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 769, "lg": 1041, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 768, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1040, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1400, "default_value": 1366, "direction": "max", "is_enabled": true }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.7.7", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "e_import_export": true, "e_hidden_wordpress_widgets": true, "landing-pages": true, "elements-color-picker": true, "favorite-widgets": true, "admin-top-bar": true }, "urls": { "assets": "https:\/\/frenify.net\/envato\/frenify\/wp\/metaportal\/1\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "viewport_mobile": 768, "viewport_tablet": 1040, "active_breakpoints": ["viewport_mobile", "viewport_tablet", "viewport_laptop"], "viewport_laptop": 1400, "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 89, "title": "MetaPortal%20%E2%80%93%20NFT%20Portfolio%20WordPress%20Theme", "excerpt": "", "featuredImage": false } };
+    </script>
+    <script type="text/javascript" src="./js/elementor-frontend.js" id="elementor-frontend-js"></script><span
+        id="elementor-device-mode" class="elementor-screen-only"></span>
+    <script type="text/javascript" src="./js/justified.js" id="justified-js"></script>
+    <script type="text/javascript" src="./js/magnific.popup.js" id="magnific.popup-js"></script>
+    <script type="text/javascript" src="./js/countto.js" id="countto-js"></script>
+    <script type="text/javascript" src="./js/swiper.js" id="swiper-js"></script>
+    <script type="text/javascript" src="./js/frel_init.js" id="frel_init-js"></script>
+    <script type="text/javascript" id="frel_hook-js-extra" src="./js/frel_hook-js-extra.js"> </script>
+    <script type="text/javascript" src="./js/frel_hook.js" id="frel_hook-js"></script>
+</body>
+
+</html>
